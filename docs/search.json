@@ -2,36 +2,36 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "Who We Are",
+    "title": "About M’Power Rhythm",
     "section": "",
-    "text": "Something about the Drum non-profit here, with invitation to follow on social media, etc."
+    "text": "Something about the non-profit here, with invitation to follow on social media, etc."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Plan Your Gift",
+    "title": "Plan Your Gift!",
     "section": "",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in magna condimentum, hendrerit risus et, consectetur turpis. Cras at molestie orci. Nam ornare, felis at fermentum venenatis, nisi velit placerat nisl, ac luctus nibh dui sit amet nibh. Nullam non turpis ut enim sagittis fermentum. Nullam porttitor ligula tortor, eu semper lorem tincidunt ac. Pellentesque mollis tortor a turpis semper sollicitudin. Duis mollis purus turpis, et finibus sapien consectetur eget. Aliquam erat volutpat. Suspendisse vel enim nibh. Donec sit amet fringilla nisl. Nam vel convallis odio, mattis consectetur turpis. Phasellus id interdum justo."
   },
   {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "Plan Your Gift",
+    "objectID": "index.html#the-good-giving-challenge-how-it-works",
+    "href": "index.html#the-good-giving-challenge-how-it-works",
+    "title": "Plan Your Gift!",
     "section": "",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in magna condimentum, hendrerit risus et, consectetur turpis. Cras at molestie orci. Nam ornare, felis at fermentum venenatis, nisi velit placerat nisl, ac luctus nibh dui sit amet nibh. Nullam non turpis ut enim sagittis fermentum. Nullam porttitor ligula tortor, eu semper lorem tincidunt ac. Pellentesque mollis tortor a turpis semper sollicitudin. Duis mollis purus turpis, et finibus sapien consectetur eget. Aliquam erat volutpat. Suspendisse vel enim nibh. Donec sit amet fringilla nisl. Nam vel convallis odio, mattis consectetur turpis. Phasellus id interdum justo."
   },
   {
     "objectID": "index.html#do-it-yourself",
     "href": "index.html#do-it-yourself",
-    "title": "Plan Your Gift",
+    "title": "Plan Your Gift!",
     "section": "Do It Yourself",
-    "text": "Do It Yourself\nThe user enters gift-values here, and sees the effect:\n\n\n\n\nNarrative\nTODO\n(Here I would provide a narrative of how each gift gnerated money: ie.e, the foundation that matched the gift, how much it matched for, etc. This narrative updates every time the user changes one of the gifts.)"
+    "text": "Do It Yourself\nThe user enters gift-values here, and sees the effect:\n\n\n\n\nNarrative\nTODO\n(Here I would provide a narrative of how each gift generated money: ie.e, the foundation that matched the gift, how much it matched for, etc. This narrative updates every time the user changes one of the gifts.)"
   },
   {
     "objectID": "index.html#our-recommendation",
     "href": "index.html#our-recommendation",
-    "title": "Plan Your Gift",
+    "title": "Plan Your Gift!",
     "section": "Our Recommendation",
-    "text": "Our Recommendation\nTODO\nThere will be a filed where the user enters a total gift amount. A table will appear underneath specifying how to distribute that gift over each of the available time periods so as to maximize the total amount your group receives."
+    "text": "Our Recommendation\nTODO\nThere will be a field where the user enters a total gift amount. A table will appear underneath specifying how to distribute that gift over each of the available time periods so as to maximize the total amount your group receives."
   }
 ]

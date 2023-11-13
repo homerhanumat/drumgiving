@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Drumming Gift Planner"
+  title: "M'Power Gift Planner"
   navbar:
     left:
       - href: index.qmd

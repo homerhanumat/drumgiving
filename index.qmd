@@ -1,8 +1,8 @@
 ---
-title: "Plan Your Gift"
+title: "Plan Your Gift!"
 ---
 
-## Introduction
+## The Good Giving Challenge:  How It Works
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc in magna condimentum, hendrerit risus et, consectetur turpis. Cras at molestie orci. Nam ornare, felis at fermentum venenatis, nisi velit placerat nisl, ac luctus nibh dui sit amet nibh. Nullam non turpis ut enim sagittis fermentum. Nullam porttitor ligula tortor, eu semper lorem tincidunt ac. Pellentesque mollis tortor a turpis semper sollicitudin. Duis mollis purus turpis, et finibus sapien consectetur eget. Aliquam erat volutpat. Suspendisse vel enim nibh. Donec sit amet fringilla nisl. Nam vel convallis odio, mattis consectetur turpis. Phasellus id interdum justo. 
 
@@ -20,13 +20,13 @@ The user enters gift-values here, and sees the effect:
 
 TODO
 
-(Here I would provide a narrative of how each gift gnerated money:  ie.e, the foundation that matched the gift, how much it matched for, etc.  This narrative updates every time the user changes one of the gifts.)
+(Here I would provide a narrative of how each gift generated money:  ie.e, the foundation that matched the gift, how much it matched for, etc.  This narrative updates every time the user changes one of the gifts.)
 
 ## Our Recommendation
 
 TODO
 
-There will be a filed where the user enters a total gift amount.  A table will appear underneath specifying how to distribute that gift over each of the available time periods so as to maximize the total amount your group receives.
+There will be a field where the user enters a total gift amount.  A table will appear underneath specifying how to distribute that gift over each of the available time periods so as to maximize the total amount your group receives.
 
 
 ```{=html}
