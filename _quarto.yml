@@ -4,6 +4,7 @@ project:
 
 website:
   title: "M'Power Gift Planner"
+  search: false
   navbar:
     left:
       - href: index.qmd
