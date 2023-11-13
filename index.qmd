@@ -36,9 +36,8 @@ We can help you split your gift!  Just enter your total gift below:
 <input id="optimize-input" type="number" value="1000">
 <br>
 <br>
+<p id="we-get"></p>
 ```
-
-Here is one way to maximize our gift with the money you plan to donate:
 
 ```{=html}
 <div id="optimize-output"></div>

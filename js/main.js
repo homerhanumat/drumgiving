@@ -216,6 +216,7 @@ function updateOptimizeNarrative(gift) {
         if (a.pool < b.pool) return -1;
         return 0;
     });
+    let total = 0;
     let current = gift;
     const itemArray = [];
     while (current > 0) {
@@ -226,10 +227,13 @@ function updateOptimizeNarrative(gift) {
         } else {
             part = Math.min(f.limit / f.match, current);
         }
+        total += part;
         const li = document.createElement("li");
         li.setAttribute("start", f.start.toString());
         let contents = `Between ${toNiceTime(f.start)} and ${toNiceTime(f.end)} on ${toNiceDay(f.start)}, `;
-        contents += `give $${part}.  Your gift will be increased by $${Math.min(f.limit, current * f.match)} by the ${f.name}.`;
+        contents += `give $${part}.  The ${f.name} will add $${Math.min(f.limit, current * f.match)}`;
+        contents += `${f.limit <= current * f.match ? ", its limit." : "."}`;
+        total += Math.min(f.limit, current * f.match);
         li.innerText = contents;
         itemArray.push(li);
         current += -part;
@@ -242,6 +246,10 @@ function updateOptimizeNarrative(gift) {
     itemArray.forEach(function(item) {
         ul.appendChild(item);
     })
+    const leadIn = document.getElementById("we-get");
+    let leadInContents = `The most we can get from such a gift is `;
+    leadInContents += ` $${total}.  Here is one way to make it happen for us:`;
+    leadIn.innerText = leadInContents;
     const output = document.getElementById("optimize-output");
     output.innerHTML = "";
     output.appendChild(ul);
