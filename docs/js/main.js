@@ -1,38 +1,53 @@
 const opportunities = {
-    bryant: {
-        name:  "Bryant Fund $13,000 Bed-Time Match",
+    Bryant: {
+        name:  "Bryant Fund (Bluegrass Community Foundation) $13,000 Bed-Time Match",
         description: "todo",
+        start: new Date(2023, 10, 28, 21, 0, 0, 0),
+        end: new Date(2023, 10, 28, 23, 59, 0, 0),
         pool: 13000,
         match: 1,
-        limit: 100
+        limit: 100,
+        url: "https://www.bgcf.org/"
     },
-    mcadam: {
-        name:  "McAdam Family  Foundation $25,000 Match Day",
+    Mcadam: {
+        name:  "McAdam Family Foundation $25,000 Match Day",
         description: "todo",
+        start: new Date(2023, 10, 29, 9, 0, 0, 0),
+        end: new Date(2023, 10, 29, 23, 59, 0, 0),
         pool: 25000,
         match: 1,
-        limit: 50
+        limit: 50,
+        url: undefined
     },
-    angel: {
+    Angel: {
         name:  "Angel Levas Foundation Arts & Community $15,000 Match",
         description: "todo",
+        start: new Date(2023, 10, 30, 13, 0, 0, 0),
+        end: new Date(2023, 10, 30, 23, 59, 0, 0),
         pool: 15000,
         match: 0.50,
-        limit: 125
+        limit: 125,
+        url: "https://www.bgcf.org/stories/evangelos-levas-helping-when-he-can/"
     },
-    marksbury: {
+    Marksbury: {
         name:  "Marksbury Family Foundation $60,000 Good Morning Match",
         description: "todo",
+        start: new Date(2023, 10, 31, 6, 0, 0, 0),
+        end: new Date(2023, 10, 31, 23, 59, 0, 0),
         pool: 60000,
         match: 0.50,
-        limit: 250
+        limit: 250,
+        url: "https://marksburyfamilyfoundation.org/"
     },
-    outlaw: {
+    Outlaw: {
         name:  "Outlaw State of Kind Hometown $100,000 Encore Match",
         description: "todo",
+        start: new Date(2023, 10, 31, 12, 0, 0, 0),
+        end: new Date(2023, 10, 31, 23, 59, 0, 0),
         pool: 100000,
         match: 0.50,
-        limit: 250
+        limit: 250,
+        url: "https://www.chrisstapleton.com/osok/"
     }
 };
 
@@ -41,52 +56,58 @@ const givingWindows = [
         name: "tuesday",
         start: new Date(2023, 10, 28, 21, 0, 0, 0),
         end: new Date(2023, 10, 28, 23, 59, 0, 0),
-        matches: ["bryant"]
+        matches: ["Bryant"]
     },
     {
         name: "wednesday",
         start: new Date(2023, 10, 29, 9, 0, 0, 0),
         end: new Date(2023, 10, 29, 23, 59, 0, 0),
-        matches: ["mcadam"]
+        matches: ["Mcadam"]
     },
     {
         name: "thursday",
         start: new Date(2023, 10, 30, 13, 0, 0, 0),
         end: new Date(2023, 10, 30, 23, 59, 0, 0),
-        matches: ["angel"]
+        matches: ["Angel"]
     },
     {
         name: "friday1",
         start: new Date(2023, 10, 31, 6, 0, 0, 0),
         end: new Date(2023, 10, 31, 11, 59, 0, 0),
-        matches: ["marksbury"]
+        matches: ["Marksbury"]
     },
     {
         name: "friday2",
         start: new Date(2023, 10, 31, 12, 0, 0, 0),
         end: new Date(2023, 10, 31, 23, 59, 0, 0),
-        matches: ["marksbury", "outlaw"]
+        matches: ["Outlaw"]
     }
 ];
 
-populateTable(id = "diy");
-addListeners(id = "diy");
+function populateMatchers(id) {
+    const ul = document.getElementById(id);
+    const matchers = Object.keys(opportunities);
+    for (let matcher of matchers) {
+        const group = opportunities[matcher];
+        const li = document.createElement("li");
+        li.setAttribute("id", "group-" + matcher);
+        let contents = `<span style='font-weight: bold'>`;
+        contents += `${group.name}: </span> <ul>`;
+        contents += `<li>Matches at a rate of ${group.match} dollar(s) for every dollar given.</li>`;
+        contents += `<li>The maximum match on any gift is $${group.limit}.`;
+        contents += ` (So whatever you give past $${group.limit / group.match} is not matched.)</li>`;
+        contents += `<li>The total amount of match-money the fund will provide is $${group.pool}.</li>`;
+        contents += `<li>The fund's's offer is effective from ${toNiceTime(group.start)} to ${toNiceTime(group.end)} on ${toNiceDay(group.start)}.</li>`
+        if (group.url) {
+            contents += `To learn more about the fund follow <a href='${group.url}'>this link</a>.</li>`;
+        }
+        li.innerHTML = contents;
+        ul.appendChild(li);
+    }
+}
 
-// populate diy table
 
 function populateTable(id) {
-
-    function toNiceTime(date) {
-        return date.toLocaleTimeString(
-            ["en"], { hour: 'numeric', minute: '2-digit' }
-        );
-    }
-
-    function toNiceDay(date) {
-        return date.toLocaleDateString(
-            ["en"], { weekday: 'long', month: "short", day: 'numeric' }
-        );
-    }
 
     const tab = document.querySelector("#" + id);
 
@@ -119,6 +140,10 @@ function populateTable(id) {
         const times = document.createElement("td");
         let timesContent = `${toNiceTime(w.start)} and ${toNiceTime(w.end)} `;
         timesContent += `on ${toNiceDay(w.start)}`;
+        timesContent += `<br>Funders: `;
+        for (let matcher of w.matches) {
+            timesContent += `<a href=${"#group-"+ matcher}>${matcher}</a> `;
+        }
         times.innerHTML = timesContent;
         row.appendChild(times);
 
@@ -179,6 +204,44 @@ function addListeners(id) {
     })
 }
 
+function updateOptimizeNarrative(gift) {
+    const funds = arrayFrom(opportunities);
+    ul = document.createElement("ul");
+    funds.sort(function(a, b) {
+        if (a.match > b.match) return 1;
+        if (a.match < b.match) return -1;
+        if (a.limit > b.limit) return 1;
+        if (a.limit < b.limit) return -1;
+        if (a.pool > b.pool) return 1;
+        if (a.pool < b.pool) return -1;
+        return 0;
+    });
+    let current = gift;
+    const itemArray = [];
+    while (current > 0) {
+        const f = funds.pop();
+        const part = Math.min(f.limit / f.match, current);
+        const li = document.createElement("li");
+        li.setAttribute("start", f.start.toString());
+        let contents = `Between ${toNiceTime(f.start)} and ${toNiceTime(f.end)} on ${toNiceDay(f.start)}, `;
+        contents += `give $${part}.  You'll be matched by the ${f.name}.`;
+        li.innerText = contents;
+        itemArray.push(li);
+        current += -part;
+    }
+    itemArray.sort(function(a, b) {
+        const aStart = a.getAttribute("start");
+        const bStart = b.getAttribute("start");
+        return new Date(aStart) - new Date(bStart);
+    });
+    itemArray.forEach(function(item) {
+        ul.appendChild(item);
+    })
+    const output = document.getElementById("optimize-output");
+    output.innerHTML = "";
+    output.appendChild(ul);
+}
+
 function computeReceipt(win, amount) {
     amount = Number(amount);
     let received = amount;
@@ -192,3 +255,40 @@ function computeReceipt(win, amount) {
     })
     return received;
 }
+
+function toNiceTime(date) {
+    return date.toLocaleTimeString(
+        ["en"], { hour: 'numeric', minute: '2-digit' }
+    );
+}
+
+function toNiceDay(date) {
+    return date.toLocaleDateString(
+        ["en"], { weekday: 'long', month: "short", day: 'numeric' }
+    );
+}
+
+// simple array from object:
+function arrayFrom(obj) {
+    const arr = [];
+    const keys = Object.keys(obj);
+    for (let key of keys) {
+        arr.push(obj[key]);
+    }
+    return arr;
+}
+
+/***********************************
+ * actions
+ ***********************************/
+
+populateMatchers(id = "matchers");
+populateTable(id = "diy");
+const optimizer = document.getElementById("optimize-input");
+updateOptimizeNarrative(gift = Number(optimizer.value));
+
+optimizer.addEventListener("input", function (e) {
+    const gift = Number(e.target.value);
+    updateOptimizeNarrative(gift);
+});
+addListeners(id = "diy");
