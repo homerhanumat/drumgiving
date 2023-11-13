@@ -220,11 +220,16 @@ function updateOptimizeNarrative(gift) {
     const itemArray = [];
     while (current > 0) {
         const f = funds.pop();
-        const part = Math.min(f.limit / f.match, current);
+        let part;
+        if (funds.length === 0) {
+            part = current;
+        } else {
+            part = Math.min(f.limit / f.match, current);
+        }
         const li = document.createElement("li");
         li.setAttribute("start", f.start.toString());
         let contents = `Between ${toNiceTime(f.start)} and ${toNiceTime(f.end)} on ${toNiceDay(f.start)}, `;
-        contents += `give $${part}.  You'll be matched by the ${f.name}.`;
+        contents += `give $${part}.  Your gift will be increased by $${Math.min(f.limit, current * f.match)} by the ${f.name}.`;
         li.innerText = contents;
         itemArray.push(li);
         current += -part;
