@@ -97,7 +97,7 @@ function populateMatchers(id) {
         contents += `<li>The maximum match on any gift is $${group.limit}.`;
         contents += ` (So whatever you give past $${group.limit / group.match} is not matched.)</li>`;
         contents += `<li>The total amount of match-money the fund will provide is $${group.pool}.</li>`;
-        contents += `<li>The fund's's offer is effective from ${toNiceTime(group.start)} to ${toNiceTime(group.end)} on ${toNiceDay(group.start)}.</li>`
+        contents += `<li>The fund's offer is effective from ${toNiceTime(group.start)} to ${toNiceTime(group.end)} on ${toNiceDay(group.start)}.</li>`
         if (group.url) {
             contents += `To learn more about the fund follow <a href='${group.url}'>this link</a>.</li>`;
         }
