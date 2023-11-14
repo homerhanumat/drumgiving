@@ -31,7 +31,11 @@ We can help you schedule your gift! Just enter your total gift below. (**Note**:
 <div id="optimize-output"></div>
 ```
 
-**Pro Tip**:  Within each time-window, try to give as early as possible, before the fund's matching-pool is exceeded!
+::: {.callout-caution}
+## Good Advice
+
+Within each time-window, try to give as early as possible, before the fund's matching-pool is exceeded!
+:::
 
 ## Do-It-Yourself Option
 
@@ -40,13 +44,20 @@ You might have a special interest in engaging with some of the funds or prefer t
 * If you are a small-to-moderate donor, you'll probably be able to generate the maximum gift to us by making just one donation:
     * Look for a time-window with the highest matching-rate (e.g., $1 for every dollar given is better than $0.50 for every dollar given).
     * Look also for high maximum matches.  For example, suppose you plan to give $150 and you have a choice between two funds, both of which match at the same rate but Fund A does not match gift amounts $100 whereas fund B matches gift amounts up to $200, then you'll generate more money for us by working with Fund B.)
-* If you are a "heavy-hitter", then you should consider splitting your gift over several time-windows in order to leverage multiple matching opportunities.  You might want to use the interactive table below to help you find a good split.
+* If you are a "heavy-hitter", then you should consider splitting your gift over several time-windows in order to leverage multiple matching opportunities.  
+
+::: {.callout-tip collapse="true"}
+
+## Want More Help? Expand to use our interactive table!
 
 ```{=html}
 <table id="diy" class="table table-bordered table-hover">
 
 </table>
 ```
+:::
+
+
 
 ## Appendix
 
