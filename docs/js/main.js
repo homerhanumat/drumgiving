@@ -140,7 +140,7 @@ function populateTable(id) {
         const times = document.createElement("td");
         let timesContent = `${toNiceTime(w.start)} and ${toNiceTime(w.end)} `;
         timesContent += `on ${toNiceDay(w.start)}`;
-        timesContent += `<br>Funders: `;
+        timesContent += `<br>Fund: `;
         for (let matcher of w.matches) {
             timesContent += `<a href=${"#group-"+ matcher}>${matcher}</a> `;
         }
@@ -230,11 +230,11 @@ function updateOptimizeNarrative(gift) {
         total += part;
         const li = document.createElement("li");
         li.setAttribute("start", f.start.toString());
-        let contents = `Between ${toNiceTime(f.start)} and ${toNiceTime(f.end)} on ${toNiceDay(f.start)}, `;
-        contents += `give $${part}.  The ${f.name} will add $${Math.min(f.limit, current * f.match)}`;
+        let contents = `<span style='font-weight: bold'>Between ${toNiceTime(f.start)} and ${toNiceTime(f.end)} on ${toNiceDay(f.start)}, `;
+        contents += `give $${part}.</span>  The ${f.name} will add $${Math.min(f.limit, current * f.match)}`;
         contents += `${f.limit <= current * f.match ? ", its limit." : "."}`;
         total += Math.min(f.limit, current * f.match);
-        li.innerText = contents;
+        li.innerHTML = contents;
         itemArray.push(li);
         current += -part;
     }
@@ -254,8 +254,8 @@ function updateOptimizeNarrative(gift) {
     } else {
         const leadIn = document.getElementById("we-get");
         let leadInContents = `The most we can get from such a gift is `;
-        leadInContents += ` $${total}.  Here is one way to make it happen for us:`;
-        leadIn.innerText = leadInContents;
+        leadInContents += ` <span style='font-weight: bold'>$${total}</span>.  Here is one way to make it happen for us:`;
+        leadIn.innerHTML = leadInContents;
         const output = document.getElementById("optimize-output");
         output.innerHTML = "";
         output.appendChild(ul);
