@@ -54,7 +54,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,23 +84,30 @@ ul.task-list li input[type="checkbox"] {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Plan Your Gift!</li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#the-good-giving-challenge-how-it-works" id="toc-the-good-giving-challenge-how-it-works" class="nav-link active" data-scroll-target="#the-good-giving-challenge-how-it-works">The Good Giving Challenge: How It Works</a></li>
-  <li><a href="#our-recommendations" id="toc-our-recommendations" class="nav-link" data-scroll-target="#our-recommendations">Our Recommendations</a></li>
-  <li><a href="#do-it-yourself-option" id="toc-do-it-yourself-option" class="nav-link" data-scroll-target="#do-it-yourself-option">Do-It-Yourself Option</a></li>
-  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix">Appendix</a></li>
-  </ul>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
 </nav>
-    </div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -129,14 +136,14 @@ ul.task-list li input[type="checkbox"] {
 <p>The funds (described in an <a href="#appendix">Appendix</a> below) differ in how much they will match, in the upper limit on how much they will match any gift, and in their total “pool” of money available to match gifts.</p>
 <p>Given the differences between the funds, you are probably wondering:</p>
 <blockquote class="blockquote">
-<p><em>How should I give so as to maximize the amount that M’Power Drum receives?</em></p>
+<p><em>How and when should I give so as to maximize the amount that M’Power Rhythm receives?</em></p>
 </blockquote>
 <p>This site aims to help you with your question!</p>
 </section>
 <section id="our-recommendations" class="level2">
 <h2 class="anchored" data-anchor-id="our-recommendations">Our Recommendations</h2>
 <p>We can help you split your gift! Just enter your total gift below! (<strong>Note</strong>: Our recommendations will update automatically.)</p>
-<input id="optimize-input" type="number" value="1000">
+<input id="optimize-input" type="number" value="1000" min="10" step="10">
 <br>
 <br>
 <p id="we-get"></p>

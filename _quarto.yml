@@ -11,11 +11,16 @@ website:
         text: Home
       - about.qmd
 
+  sidebar: 
+    style: "docked"
+    logo: images/logo.png
+
+
 format:
   html:
-    theme: cosmo
+    theme: cerulean
     css: styles.css
-    toc: true
+    toc: false
 
 
 

@@ -246,13 +246,20 @@ function updateOptimizeNarrative(gift) {
     itemArray.forEach(function(item) {
         ul.appendChild(item);
     })
-    const leadIn = document.getElementById("we-get");
-    let leadInContents = `The most we can get from such a gift is `;
-    leadInContents += ` $${total}.  Here is one way to make it happen for us:`;
-    leadIn.innerText = leadInContents;
-    const output = document.getElementById("optimize-output");
-    output.innerHTML = "";
-    output.appendChild(ul);
+    if (gift < 10) {
+        const leadIn = document.getElementById("we-get");
+        const output = document.getElementById("optimize-output");
+        leadIn.innerText = `The minimum gift is $10.`;
+        output.innerHTML = "";
+    } else {
+        const leadIn = document.getElementById("we-get");
+        let leadInContents = `The most we can get from such a gift is `;
+        leadInContents += ` $${total}.  Here is one way to make it happen for us:`;
+        leadIn.innerText = leadInContents;
+        const output = document.getElementById("optimize-output");
+        output.innerHTML = "";
+        output.appendChild(ul);
+    }
 }
 
 function computeReceipt(win, amount) {

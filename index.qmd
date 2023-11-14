@@ -10,7 +10,7 @@ The funds (described in an [Appendix](#appendix) below)  differ in how much they
 
 Given the differences between the funds, you are probably wondering:
 
->*How should I give so as to maximize the amount that M'Power Drum receives?*
+>*How and when should I give so as to maximize the amount that M'Power Rhythm receives?*
 
 This site aims to help you with your question!
 
@@ -19,7 +19,7 @@ This site aims to help you with your question!
 We can help you split your gift!  Just enter your total gift below!  (**Note**:  Our recommendations will update automatically.)
 
 ```{=html}
-<input id="optimize-input" type="number" value="1000">
+<input id="optimize-input" type="number" value="1000" min="10" step = "10">
 <br>
 <br>
 <p id="we-get"></p>
