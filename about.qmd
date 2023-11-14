@@ -1,15 +1,15 @@
 ---
-title: ""
+title: "M'Power Rhythm"
 about:
   template: jolla
-  image: images/logo.png
-  image-shape: rectangle
+  image: images/group.jpg
+  image-shape: round
   image-width: 20em
   links:
     - icon: twitter
       text: Facebook
       href: https://www.facebook.com/profile.php?id=61553658621684
-sidebar: false
+sidebar: true
 ---
 
 <em style="font-size: 120%">Empowering Youth, Building Community, Honoring Culture</em>
