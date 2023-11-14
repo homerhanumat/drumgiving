@@ -1,5 +1,23 @@
 ---
-title: "About M'Power Rhythm"
+title: ""
+about:
+  template: jolla
+  image: images/logo.png
+  image-shape: rectangle
+  image-width: 20em
+  links:
+    - icon: twitter
+      text: Facebook
+      href: https://www.facebook.com/profile.php?id=61553658621684
+sidebar: false
 ---
 
-Something about the non-profit here, with invitation to follow on social media, etc.
+<em style="font-size: 120%">Empowering Youth, Building Community, Honoring Culture</em>
+
+M’Power Rhythm is a nonprofit music education organization, formed in 2023, focused on empowering youth, building community, and honoring culture through the medium of ensemble African drumming. We invite youth ages 8-18 from diverse cultural and socioeconomic backgrounds to join us in our joyful and expert-led musical environments and performances. 
+
+Group drumming is not only a potent approach to percussion,  but also fertile ground for learning teamwork, experiencing belonging, and expressing emotions and creativity. 
+
+While playing the rhythms of cultures from throughout the African diaspora, our students develop discipline, confidence and leadership.   
+
+

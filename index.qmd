@@ -18,7 +18,7 @@ This site aims to help you with your question!
 
 Depending on the amount you are giving it may be best to split the gift and give it over multiple days to maximize the matching funds.
 
-We can help you split your gift! Just enter your total gift below. (**Note**: Our recommendations will update automatically.) 
+We can help you schedule your gift! Just enter your total gift below. (**Note**: Our recommendations will update automatically.) 
 
 ```{=html}
 <input id="optimize-input" type="number" value="1000" min="10" step = "10">
