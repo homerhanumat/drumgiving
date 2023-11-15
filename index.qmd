@@ -37,6 +37,10 @@ We can help you schedule your gift! Just enter your total gift below. (**Note**:
 Within each time-window, try to give as early as possible, before the fund's matching-pool is exceeded!
 :::
 
+```{=html}
+<a class="btn btn-outline-primary" href="https://www.bggives.org/organization/MPower_Rhythm" role="button">Donate Now</a>
+```
+
 ## Do-It-Yourself Option
 
 You might have a special interest in engaging with some of the funds or prefer to give on particular days.  If you are still interested in maximizing the money we get from your gift---the recommendation we provided in the previous section is usually not a unique solution---then we offer the following advice:
@@ -56,6 +60,10 @@ You might have a special interest in engaging with some of the funds or prefer t
 </table>
 ```
 :::
+
+```{=html}
+<a class="btn btn-outline-primary" href="https://www.bggives.org/organization/MPower_Rhythm" role="button">Donate Now</a>
+```
 
 
 
