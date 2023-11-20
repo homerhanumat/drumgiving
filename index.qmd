@@ -18,10 +18,10 @@ This site aims to help you with your question!
 
 Depending on the amount you are giving it may be best to split the gift and give it over multiple days to maximize the matching funds.
 
-We can help you schedule your gift! Just enter your total gift below. (**Note**: Our recommendations will update automatically.) 
+We can help you schedule your gift!  Just enter the dollar amount you plan to give to see how it can be maximized. (**Note**: Our recommendations will update automatically.) 
 
 ```{=html}
-<input id="optimize-input" type="number" value="120" min="10" step = "10">
+<input id="optimize-input" type="number" value="125" min="10" step = "10">
 <br>
 <br>
 <p id="we-get"></p>

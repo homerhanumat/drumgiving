@@ -253,8 +253,9 @@ function updateOptimizeNarrative(gift) {
         output.innerHTML = "";
     } else {
         const leadIn = document.getElementById("we-get");
-        let leadInContents = `The most we can get from such a gift is `;
-        leadInContents += ` <span style='font-weight: bold'>$${total}</span>.  Here is one way to make it happen for us:`;
+        let leadInContents = `This gift can be maximized by matching funds to become `;
+        leadInContents += ` <span style='font-weight: bold'>$${total}</span> `;
+        leadInContents += ` for M'Power Rhythm. Here's how to make that happen for us:`;
         leadIn.innerHTML = leadInContents;
         const output = document.getElementById("optimize-output");
         output.innerHTML = "";
