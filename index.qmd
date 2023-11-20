@@ -21,7 +21,7 @@ Depending on the amount you are giving it may be best to split the gift and give
 We can help you schedule your gift! Just enter your total gift below. (**Note**: Our recommendations will update automatically.) 
 
 ```{=html}
-<input id="optimize-input" type="number" value="1000" min="10" step = "10">
+<input id="optimize-input" type="number" value="120" min="10" step = "10">
 <br>
 <br>
 <p id="we-get"></p>

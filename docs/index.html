@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.502">
+<meta name="generator" content="quarto-1.4.489">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="our-recommendations">Our Recommendations</h2>
 <p>Depending on the amount you are giving it may be best to split the gift and give it over multiple days to maximize the matching funds.</p>
 <p>We can help you schedule your gift! Just enter your total gift below. (<strong>Note</strong>: Our recommendations will update automatically.)</p>
-<input id="optimize-input" type="number" value="1000" min="10" step="10">
+<input id="optimize-input" type="number" value="120" min="10" step="10">
 <br>
 <br>
 <p id="we-get"></p>
@@ -361,15 +361,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
         }
         typesetMath(container);
         return container.innerHTML
